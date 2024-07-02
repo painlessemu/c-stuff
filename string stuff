@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -18,11 +19,11 @@ int main()
 
     concat(result, word1, word2);
 
-    printf("%s", result)
+    printf("%s\n", result);
 
-    printf("%d", equalString("James", "poop"));
+    printf("%d\n", equalString("James", "poop"));
 
-    printf("%d", equalString("james", "james"));
+    printf("%d\n", equalString("james", "james"));
 
     return 0;
 }
@@ -48,8 +49,12 @@ void concat(char result[], const char str[], const char str1[])
 
     for (j = 0; str[j] != '\0'; ++j )
     {
-        result[i + j] = str1[j];
+        result[i + j] = str[j];
     }
+
+    result[i + j] = '\0';
+}
+
 bool equalString(const char s1[], const char s2[])
 {
     int i = 0;
@@ -66,6 +71,4 @@ bool equalString(const char s1[], const char s2[])
         isEquals = false;
 
     return isEquals;
-}
-    result[i + j] = '\0'
 }
