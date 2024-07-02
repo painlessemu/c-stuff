@@ -3,14 +3,20 @@
 
 
 int stringLength(const char string[]);
+void concat(char result[], const char str[], const char str1[]);
 
 int main()
 {
     const char word1[] = "james";
     const char word2[] = "asshole";
     const char word3[] = "mange";
+    char result[50];
 
     printf("%d    %d    %d\n",stringLength(word1), stringLength(word2), stringLength(word3));
+
+    concat(result, word1, word2);
+
+    printf("%s", result)
 
     return 0;
 }
@@ -23,4 +29,21 @@ int stringLength(const char string[])
         ++count;
 
     return count;
+}
+
+void concat(char result[], const char str[], const char str1[]);
+{
+    int i, j;
+
+    for (i = 0; str1[i] != '\0'; ++i )
+    {
+        result[i] = str1[i];
+    }
+
+    for (j = 0; str[j] != '\0'; ++j )
+    {
+        result[i + j] = str1[j];
+    }
+
+    result[i + j] = '\0'
 }
