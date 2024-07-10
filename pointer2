@@ -10,10 +10,11 @@ int main()
     //setting pointer to value 
     pnum = &num;   
 
-    printf("Address of pnum: %p\n", &pnum);
+    printf("Value of num: %d\n", num);
     printf("Num Address is: %p\n", &num);
+    printf("Address of pnum: %p\n", &pnum);
     printf("Value of the pnum: %p\n", pnum);
-    printf("Value of what pnum is pointing to: %d\n", *pnum)
+    printf("Value of what pnum is pointing to: %d\n", *pnum);
     printf("Bytes of data: %d\n", sizeof(pnum));
 
     return 0;
