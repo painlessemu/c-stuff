@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+int square (int *x);
+ 
+
+int main(void)
+{
+    /* local variable definition*/
+    int n;
+    int *pn = NULL;
+
+    /* Setting pointer to value*/
+    pn = &n;
+
+    printf("Please enter a number\n");
+    scanf(%d, pn);
+
+    printf("You entered %d. The square root of %d is %d.\n", pn, pn, square(pn));
+
+   
+    return 0; 
+}
+
+int square (int *x);
+{
+    temp = *x; // save the value of x
+    square = temp * temp;
+
+    return square;
+}
