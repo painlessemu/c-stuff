@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int square (int *x);
+void square (int const *x);
  
 
 int main(void)
@@ -14,7 +14,7 @@ int main(void)
     pn = &n;
 
     printf("Please enter a number\n");
-    scanf(%d, pn);
+    scanf("%d", pn);
 
     printf("You entered %d. The square root of %d is %d.\n", pn, pn, square(pn));
 
@@ -22,10 +22,10 @@ int main(void)
     return 0; 
 }
 
-int square (int *x);
+void square (int const *x);
 {
-    temp = *x; // save the value of x
-    square = temp * temp;
+    *x = (*x) * (*x); // save the value of x
+    
 
     return square;
 }
