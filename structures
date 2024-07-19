@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct employee {
+char name[30];
+char date[15];
+float salary;
+};
+
+
+int main()
+{
+    /* Declare and initialization of structure variable*/
+    struct employee emp={"Mike", "7/16/15", 76909.00f};
+
+    printf("\n Name: %s"    ,emp.name);
+    printf("\n Hire Date: %s"    ,emp.date);
+    printf("\n Salary: %f.2\n",emp.salary)
+
+    struct employee emp2;
+
+    printf("\n Enter employee information: \n");
+    printf("Name: ");
+    scanf("%s", emp2.name);
+
+    printf("\n Hire date:");
+    scanf("%s", emp2.date);
+
+    printf("\n Salary:");
+    scanf("%f", &emp2.salary);
+
+    printf("\n Name: %s"    ,emp2.name);
+    printf("\n Hire Date: %s"    ,emp2.date);
+    printf("\n Salary: %f.2\n",emp2.salary)
+
+    return 0;
