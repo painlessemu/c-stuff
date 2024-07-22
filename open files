@@ -12,11 +12,11 @@ int main () {
         return(-1);
     }
     /* read a file by character*/
-    while((c = fget(fp)) != EOF)
-        printf("%c", c)
+    while((c = fgetc(fp)) != EOF)
+        printf("%c", c);
 
     fclose(fp);
     fp = NULL;
-    system ("pause");
+    system("pause");
     return(0);
 }
